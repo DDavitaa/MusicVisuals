@@ -2,7 +2,6 @@ package c20406272.visuals;
 
 import processing.core.*;
 
-// This is an example of a visual that uses the audio bands
 public class FloatingBands
 {
     Mula mula;
@@ -15,15 +14,8 @@ public class FloatingBands
         this.mula = mula; 
     }
 
-    public void render()
+    public void drawCircles()
     {
-        mula.colorMode(mula.HSB);
-        float gap = mula.width / (float) mula.getBands().length;
-
-        rot += mula.getSmoothedBands()[1]*0.01f;
-        mula.stroke(0,0,255);
-        mula.strokeWeight(5);
-
         for(int i=0; i <=5; i++)
         {
             mula.pushMatrix();
@@ -39,16 +31,18 @@ public class FloatingBands
         {
             mula.pushMatrix();
             mula.noFill();
-            //mula.fill(127,255,255);
+
             mula.translate(mula.width-mula.width/11-i*mula.width/20,mula.height/3+i*mula.width/200,i*-mula.width/6.4f-mula.width/256);
             mula.rotateX(PApplet.radians(10));
             mula.rotateY(PApplet.radians(15));
            
-            //mula.rotateZ(mula.radians(90));
             mula.circle(0,0, mula.width/5 + mula.getSmoothedBands()[i] * 0.2f);
             mula.popMatrix();
         }
+    }
 
+    public void drawBands(float gap)
+    {
         for(int i = 0 ; i < mula.getBands().length ; i ++)
         {
             mula.fill(PApplet.map(i, 0, mula.getBands().length, 255, 0), 200, 255);
@@ -88,12 +82,10 @@ public class FloatingBands
             mula.box(gap, mula.width/80+mula.getSmoothedBands()[i] * 0.2f, mula.width/80+mula.getSmoothedBands()[i] * 0.2f);
             mula.popMatrix();
         }
+    }
 
-        //mula.fill(127,255,255);
-        //mula.noStroke();
-
-        rot2 += 0.01f;
-
+    public void drawCubes()
+    {
         mula.noFill();
         mula.stroke(127,255,255);
 
@@ -155,6 +147,25 @@ public class FloatingBands
         mula.rotateZ(rot2);
         mula.box(mula.width/30+mula.getSmoothedBands()[1] * 0.3f, mula.width/30+mula.getSmoothedBands()[4] * 0.3f, mula.width/30+mula.getSmoothedBands()[6] * 0.3f);
         mula.popMatrix();
+    }
+
+    public void render()
+    {
+        mula.colorMode(PApplet.HSB);
+        float gap = mula.width / (float) mula.getBands().length;
+
+        rot += mula.getSmoothedBands()[1]*0.01f;
+        mula.stroke(0,0,255);
+        mula.strokeWeight(5);
+
+        drawCircles();
+
+        drawBands(gap);
+
+        rot2 += 0.01f;
+
+        drawCubes();
+        
 
     }
 }

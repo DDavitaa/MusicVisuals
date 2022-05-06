@@ -99,7 +99,6 @@ public class Hallway {
     {
         if(!mula.mousePressed)
         {
-            //mula.stroke(0,0,0);
             bulletZ = 0;
             bulletZ = bulletZ + 1f;
         }

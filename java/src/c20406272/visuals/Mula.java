@@ -12,12 +12,9 @@ public class Mula extends Visual
 
     int drawMode = 1;    
     boolean pause = true;
-    ///////////////////////////////
-
 
     public void settings()
     {
-        //size(800, 800);
         smooth();
         fullScreen(P3D, 1);
     }
@@ -31,7 +28,6 @@ public class Mula extends Visual
         hw = new Hallway(this);
         fb = new FloatingBands(this);
 
-        //textFont(createFont("SourceCodePro-Regular.ttf", 36));
     }
 
     public void keyPressed()
@@ -75,11 +71,6 @@ public class Mula extends Visual
                 drawMode = 2;
                 break;
             }
-            case '3':
-            {
-                drawMode = 3;
-                break;
-            }
             default:
             {
 
@@ -115,10 +106,10 @@ public class Mula extends Visual
 
         //Shadow
         fill(0,0,0,70);
-        text("Use 1,2,3 to change scenes", width/2+width/205, height/2+height/205);
+        text("Use 1 and 2 to change scenes", width/2+width/205, height/2+height/205);
         //Text
         fill(0);
-        text("Use 1,2,3 to change scenes", width/2, height/2);
+        text("Use 1 and 2 to change scenes", width/2, height/2);
 
         //Shadow
         fill(0,0,0,70);
@@ -197,10 +188,6 @@ public class Mula extends Visual
             {
                 fb.render();
 
-                break;
-            }
-            case 3:
-            {
                 break;
             }
         }
