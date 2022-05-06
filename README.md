@@ -1,10 +1,10 @@
 # Music Visualiser Project
-Name: Bongani Moyo
-Student Number: C20309081
-Name: Nelson Ude
-Student Number: C20479276
-Name: David Davitashvili
-Student Number: C20406272
+- Name: Bongani Moyo
+- Student Number: C20309081
+- Name: Nelson Ude
+- Student Number: C20479276
+- Name: David Davitashvili
+- Student Number: C20406272
 
 # Video
 [![YouTube](http://img.youtube.com/vi/GHtYQEfOZCk/0.jpg)](https://youtu.be/GHtYQEfOZCk)
@@ -54,7 +54,7 @@ The first visual uses the bass to move the cubes that are stacked beside each ot
 ### Visual 2
 The second visual uses all frequencies of the song. The bands are 3D and rotated using the bass on its x-axis to give it spin. The circles around the bands are also bands themselves. The three cubes have different frequencies controlling the size along the x, y and z axes. 
 
-![An image](images/visual2.png)
+![An image](images/visual2.PNG)
 
 # What we are most proud of in the assignment
 We are mostly proud of how well our team worked regardless of how different our skills in coding were and also how well the visuals turned out especially the hallway visual.
