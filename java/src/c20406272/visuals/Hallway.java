@@ -36,7 +36,7 @@ public class Hallway {
     {
         for(int i = -1500; i <= 15; i++)
         {
-            mula.fill(PApplet.map(255,0,mula.getSmoothedBands()[0]*4,255,0),PApplet.map(255,0,mula.getSmoothedBands()[0]*4,255,0),0);
+            mula.fill(PApplet.map(255,0,mula.getSmoothedBands()[4]*1f,255,0),PApplet.map(255,0,mula.getSmoothedBands()[4]*1f,255,0),0);
             mula.stroke(0);
 
             if(i % 2 == 0)
@@ -228,7 +228,7 @@ public class Hallway {
 
     public void render()
     {
-        add = add + mula.getSmoothedBands()[0] * 0.3f;
+        add = add + mula.getSmoothedBands()[1] * 0.3f;
         bulletZ = bulletZ + 1f;
         float hallSize = mula.height/2.0f + mula.height/5.0f;
 

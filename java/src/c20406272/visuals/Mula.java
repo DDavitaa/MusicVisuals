@@ -5,7 +5,7 @@ import ie.tudublin.*;
 public class Mula extends Visual 
 {
     Hallway hw;
-    AudioBandsVisual abv;
+    FloatingBands fb;
 
     boolean titleScreen = true;
     float lightToDark = 255;
@@ -29,7 +29,7 @@ public class Mula extends Visual
         loadAudio("mula.mp3");  
 
         hw = new Hallway(this);
-        abv = new AudioBandsVisual(this);
+        fb = new FloatingBands(this);
 
         //textFont(createFont("SourceCodePro-Regular.ttf", 36));
     }
@@ -195,13 +195,12 @@ public class Mula extends Visual
             }
             case 2:
             {
-                abv.render();
-                
+                fb.render();
+
                 break;
             }
             case 3:
             {
-             
                 break;
             }
         }
@@ -209,8 +208,6 @@ public class Mula extends Visual
 
     public void draw()
     {
-        
-
         if(titleScreen == false)
         {
             
